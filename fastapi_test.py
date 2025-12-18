@@ -1,6 +1,7 @@
 # /opt/anaconda3/bin/python3
 import requests
 import pandas as pd
+import platform
 from pathlib import Path
 # from src.config import DATA_DIR
 
@@ -9,7 +10,12 @@ def main():
 
     # df = pd.read_csv(data_path)
 
-    df = pd.read_csv("/Users/chinmairaman/Documents/Classes/Hariom Jha/python_project/data/raw/WineQT.csv")
+    if platform.system() == "Darwin":
+        data_path = Path("/Users/chinmairaman/Documents/Classes/Hariom Jha/python_project/data/raw/WineQT.csv")
+    else:
+        data_path = Path("/home/ec2-user/wine_quality/data/raw/WineQT.csv")
+
+    df = pd.read_csv(data_path)
 
     for i in range(10):
 
