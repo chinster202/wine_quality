@@ -16,6 +16,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License"
 ]
 dependencies = [
+    "celery>=5.6.0",
     "fastapi[standard]>=0.124.2",
     "loguru",
     "matplotlib>=3.10.7",
@@ -23,6 +24,8 @@ dependencies = [
     "pip",
     "pytest",
     "python-dotenv",
+    "redis>=7.1.0",
+    "requests>=2.32.5",
     "ruff",
     "scikit-learn>=1.7.2",
     "seaborn>=0.13.2",
